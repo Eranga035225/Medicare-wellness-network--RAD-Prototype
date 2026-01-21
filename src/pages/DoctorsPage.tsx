@@ -241,7 +241,7 @@ export default function DoctorsPage() {
                       
                       <div className="text-right space-y-3">
                         <p className="text-2xl font-bold text-primary">
-                          £{doctor.consultationFee}
+                          LKR{doctor.consultationFee}
                         </p>
                         <p className="text-xs text-muted-foreground">per session</p>
                         

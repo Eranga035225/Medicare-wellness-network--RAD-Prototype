@@ -129,7 +129,7 @@ export default function BillingPage() {
                   <DollarSign className="h-6 w-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">£{totalRevenue.toFixed(2)}</p>
+                  <p className="text-2xl font-bold">LKR{totalRevenue.toFixed(2)}</p>
                   <p className="text-sm text-muted-foreground">Total Revenue</p>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default function BillingPage() {
                   <Clock className="h-6 w-6 text-yellow-600" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">£{pendingAmount.toFixed(2)}</p>
+                  <p className="text-2xl font-bold">LKR{pendingAmount.toFixed(2)}</p>
                   <p className="text-sm text-muted-foreground">Pending</p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export default function BillingPage() {
                   <Receipt className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">£{totalTaxCollected.toFixed(2)}</p>
+                  <p className="text-2xl font-bold">LKR{totalTaxCollected.toFixed(2)}</p>
                   <p className="text-sm text-muted-foreground">Tax Collected (8%)</p>
                 </div>
               </div>
@@ -255,12 +255,12 @@ export default function BillingPage() {
                       </TableCell>
                       <TableCell>{bill.billDate}</TableCell>
                       <TableCell>{bill.sessionsBooked}</TableCell>
-                      <TableCell>£{bill.grossAmount.toFixed(2)}</TableCell>
+                      <TableCell>LKR{bill.grossAmount.toFixed(2)}</TableCell>
                       <TableCell className="text-green-600">
                         -{((bill.packageDiscountRate + bill.membershipDiscountRate) * 100).toFixed(0)}%
                       </TableCell>
-                      <TableCell>£{bill.taxAmount.toFixed(2)}</TableCell>
-                      <TableCell className="font-bold">£{bill.finalAmount.toFixed(2)}</TableCell>
+                      <TableCell>LKR{bill.taxAmount.toFixed(2)}</TableCell>
+                      <TableCell className="font-bold">LKR{bill.finalAmount.toFixed(2)}</TableCell>
                       <TableCell>
                         <Badge className={`gap-1 ${statusConfig[bill.paymentStatus].color}`}>
                           {statusConfig[bill.paymentStatus].icon}
@@ -323,24 +323,24 @@ export default function BillingPage() {
                                   <div className="space-y-2">
                                     <div className="flex justify-between">
                                       <span>Gross Amount</span>
-                                      <span>£{selectedBill.grossAmount.toFixed(2)}</span>
+                                      <span>LKR{selectedBill.grossAmount.toFixed(2)}</span>
                                     </div>
                                     <div className="flex justify-between text-green-600">
                                       <span>Package Discount ({(selectedBill.packageDiscountRate * 100).toFixed(0)}%)</span>
-                                      <span>-£{(selectedBill.grossAmount * selectedBill.packageDiscountRate).toFixed(2)}</span>
+                                      <span>-LKR{(selectedBill.grossAmount * selectedBill.packageDiscountRate).toFixed(2)}</span>
                                     </div>
                                     <div className="flex justify-between text-purple-600">
                                       <span>Membership Discount ({(selectedBill.membershipDiscountRate * 100).toFixed(0)}%)</span>
-                                      <span>-£{(selectedBill.grossAmount * selectedBill.membershipDiscountRate).toFixed(2)}</span>
+                                      <span>-LKR{(selectedBill.grossAmount * selectedBill.membershipDiscountRate).toFixed(2)}</span>
                                     </div>
                                     <div className="flex justify-between text-muted-foreground">
                                       <span>NHS Wellness Tax (8%)</span>
-                                      <span>+£{selectedBill.taxAmount.toFixed(2)}</span>
+                                      <span>+LKR{selectedBill.taxAmount.toFixed(2)}</span>
                                     </div>
                                     <Separator />
                                     <div className="flex justify-between font-bold text-lg">
                                       <span>Total</span>
-                                      <span>£{selectedBill.finalAmount.toFixed(2)}</span>
+                                      <span>LKR{selectedBill.finalAmount.toFixed(2)}</span>
                                     </div>
                                   </div>
 
@@ -396,7 +396,7 @@ export default function BillingPage() {
                     <CardContent className="pt-6">
                       <h4 className="font-semibold">{pkg.name}</h4>
                       <p className="text-2xl font-bold text-primary mt-2">
-                        £{totalIncome.toFixed(2)}
+                        LKR{totalIncome.toFixed(2)}
                       </p>
                       <p className="text-sm text-muted-foreground">
                         {count} purchase{count !== 1 ? 's' : ''}

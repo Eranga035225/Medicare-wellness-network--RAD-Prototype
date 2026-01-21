@@ -114,7 +114,7 @@ export default function ReportsPage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-green-100">Total Revenue</p>
-                    <p className="text-3xl font-bold">£{stats.totalRevenue.toFixed(2)}</p>
+                    <p className="text-3xl font-bold">LKR{stats.totalRevenue.toFixed(2)}</p>
                   </div>
                   <TrendingUp className="h-10 w-10 opacity-80" />
                 </div>
@@ -309,7 +309,7 @@ export default function ReportsPage() {
                         </div>
                         <div className="text-center p-4 bg-muted rounded-lg">
                           <TrendingUp className="h-6 w-6 mx-auto mb-2 text-green-600" />
-                          <p className="text-2xl font-bold">£{bp.revenue.toFixed(0)}</p>
+                          <p className="text-2xl font-bold">LKR{bp.revenue.toFixed(0)}</p>
                           <p className="text-xs text-muted-foreground">Revenue</p>
                         </div>
                       </div>
@@ -342,7 +342,7 @@ export default function ReportsPage() {
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className="font-bold text-lg">£{revenue.toFixed(2)}</p>
+                        <p className="font-bold text-lg">LKR{revenue.toFixed(2)}</p>
                         <Badge variant="secondary">{sales} sales</Badge>
                       </div>
                     </div>

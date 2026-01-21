@@ -232,7 +232,7 @@ export default function AppointmentsPage() {
                           .filter(d => d.branchId === selectedBranch && d.isAvailable)
                           .map(doctor => (
                             <SelectItem key={doctor.id} value={doctor.id}>
-                              Dr. {doctor.firstName} {doctor.lastName} - £{doctor.consultationFee}
+                              Dr. {doctor.firstName} {doctor.lastName} - LKR{doctor.consultationFee}
                             </SelectItem>
                           ))}
                       </SelectContent>
