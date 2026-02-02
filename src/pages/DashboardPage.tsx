@@ -28,7 +28,7 @@ export default function DashboardPage() {
         <StatCard title="Total Patients" value={stats.totalPatients} change="+12% from last month" changeType="positive" icon={Users} delay={0} />
         <StatCard title="Today's Appointments" value={stats.todayAppointments} icon={Calendar} delay={0.1} />
         <StatCard title="Pending Bills" value={stats.pendingBills} icon={CreditCard} delay={0.2} />
-        <StatCard title="Revenue (Month)" value={`£${stats.totalRevenue.toFixed(2)}`} change="+8.2% growth" changeType="positive" icon={TrendingUp} delay={0.3} />
+        <StatCard title="Revenue (Month)" value={`LKR${stats.totalRevenue.toFixed(2)}`} change="+8.2% growth" changeType="positive" icon={TrendingUp} delay={0.3} />
       </div>
 
       {/* Quick Actions & Appointments */}

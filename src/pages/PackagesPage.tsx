@@ -81,7 +81,7 @@ export default function PackagesPage() {
 
     toast({
       title: "Package Purchased Successfully",
-      description: `${selectedPackage.name} (${sessionsToBook} sessions) for ${patient?.firstName} ${patient?.lastName}. Total: £${pricing.finalAmount.toFixed(2)}`,
+      description: `${selectedPackage.name} (${sessionsToBook} sessions) for ${patient?.firstName} ${patient?.lastName}. Total: LKR${pricing.finalAmount.toFixed(2)}`,
     });
 
     setIsPurchaseOpen(false);
@@ -219,7 +219,7 @@ export default function PackagesPage() {
                       </div>
                       <div className="flex items-center gap-2 text-sm">
                         <Clock className="h-4 w-4 text-blue-500" />
-                        <span>£{pkg.sessionPrice} per session</span>
+                        <span>LKR{pkg.sessionPrice} per session</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm">
                         <Calendar className="h-4 w-4 text-purple-500" />
@@ -231,10 +231,10 @@ export default function PackagesPage() {
                   <CardFooter className="p-4 flex justify-between items-center">
                     <div>
                       <p className="text-2xl font-bold">
-                        £{(pkg.sessionPrice * pkg.sessionsIncluded * (1 - pkg.packageDiscount)).toFixed(0)}
+                        LKR{(pkg.sessionPrice * pkg.sessionsIncluded * (1 - pkg.packageDiscount)).toFixed(0)}
                       </p>
                       <p className="text-xs text-muted-foreground line-through">
-                        £{(pkg.sessionPrice * pkg.sessionsIncluded).toFixed(0)}
+                        LKR{(pkg.sessionPrice * pkg.sessionsIncluded).toFixed(0)}
                       </p>
                     </div>
                     <Dialog open={isPurchaseOpen && selectedPackage?.id === pkg.id} onOpenChange={(open) => {
@@ -294,27 +294,27 @@ export default function PackagesPage() {
                                   return (
                                     <>
                                       <div className="flex justify-between text-sm">
-                                        <span>Gross Amount ({sessionsToBook} × £{pkg.sessionPrice})</span>
-                                        <span>£{pricing.grossAmount.toFixed(2)}</span>
+                                        <span>Gross Amount ({sessionsToBook} × LKR{pkg.sessionPrice})</span>
+                                        <span>LKR{pricing.grossAmount.toFixed(2)}</span>
                                       </div>
                                       <div className="flex justify-between text-sm text-green-600">
                                         <span>Package Discount ({(pkg.packageDiscount * 100).toFixed(0)}%)</span>
-                                        <span>-£{pricing.packageDiscount.toFixed(2)}</span>
+                                        <span>-LKR{pricing.packageDiscount.toFixed(2)}</span>
                                       </div>
                                       {pricing.membershipDiscount > 0 && (
                                         <div className="flex justify-between text-sm text-purple-600">
                                           <span>Membership Discount ({getPatientMembership()})</span>
-                                          <span>-£{pricing.membershipDiscount.toFixed(2)}</span>
+                                          <span>-LKR{pricing.membershipDiscount.toFixed(2)}</span>
                                         </div>
                                       )}
                                       <div className="flex justify-between text-sm text-muted-foreground">
                                         <span>NHS Wellness Tax (8%)</span>
-                                        <span>+£{pricing.tax.toFixed(2)}</span>
+                                        <span>+LKR{pricing.tax.toFixed(2)}</span>
                                       </div>
                                       <Separator />
                                       <div className="flex justify-between font-bold text-lg">
                                         <span>Total</span>
-                                        <span>£{pricing.finalAmount.toFixed(2)}</span>
+                                        <span>LKR{pricing.finalAmount.toFixed(2)}</span>
                                       </div>
                                     </>
                                   );

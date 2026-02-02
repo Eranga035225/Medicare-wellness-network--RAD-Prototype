@@ -489,7 +489,7 @@ export default function PatientsPage() {
                                             </p>
                                           </div>
                                           <div className="text-right">
-                                            <p className="font-bold">£{bill.finalAmount.toFixed(2)}</p>
+                                            <p className="font-bold">LKR{bill.finalAmount.toFixed(2)}</p>
                                             <Badge variant={bill.paymentStatus === 'paid' ? 'default' : 'secondary'}>
                                               {bill.paymentStatus}
                                             </Badge>
